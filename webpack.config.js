@@ -1,7 +1,7 @@
 'use strict';
 
-const NODE_ENV = process.env.NODE_ENV || 'development';
-const webpack = require('webpack');
+var NODE_ENV = process.env.NODE_ENV || 'development';
+var webpack = require('webpack');
 
 module.exports = {
   context: __dirname + '/frontend',
