@@ -1,9 +1,23 @@
 "use strict";
 
-let users = [
-  {id: "abcd", name: "Vasya"},
-  {id: "defa", name: "Petya"},
-  {id: "1234", name: "Masha"}
-];
+document.getElementById('loginButton').onclick = function() {
 
-console.log( pluck(users, 'name') );
+  // ======== Способ 1 (require.ensure) ==
+  require.ensure([], function(require) {
+    let login = require('./login');
+
+    login();
+  }, 'auth');
+
+};
+
+document.getElementById('logoutButton').onclick = function() {
+
+  // ======== Способ 1 (require.ensure) ==
+  require.ensure([], function(require) {
+    let logout = require('./logout');
+
+    logout();
+  }, 'auth');
+
+};
